@@ -41,8 +41,18 @@ class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Counter App"), centerTitle: true),
-      backgroundColor: Colors.purpleAccent,
+      appBar: AppBar(
+        title: const Text(
+          "Counter App",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      backgroundColor: Colors.white.withOpacity(0.4),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -58,7 +68,7 @@ class _CounterScreenState extends State<CounterScreen> {
             Text(
               "$_counter",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -70,8 +80,11 @@ class _CounterScreenState extends State<CounterScreen> {
                   onPressed: _increment,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.green,
-                    padding: EdgeInsets.all(9),
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 9),
                     iconColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   child: Icon(Icons.add_circle),
                 ),
@@ -80,8 +93,11 @@ class _CounterScreenState extends State<CounterScreen> {
                   onPressed: _decrement,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.red,
-                    padding: EdgeInsets.all(9),
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 9),
                     iconColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   child: Icon(Icons.remove_circle),
                 ),
