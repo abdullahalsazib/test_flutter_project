@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:test_project/models/category_model.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -147,7 +149,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         SizedBox(height: 15),
-        Container(
+        SizedBox(
           height: 240,
           child: ListView.separated(
             itemBuilder: (context, index) => Container(
@@ -234,7 +236,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         SizedBox(height: 20),
-        Container(
+        SizedBox(
           height: 120,
           child: ListView.separated(
             itemCount: categories.length,
